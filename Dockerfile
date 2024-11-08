@@ -20,7 +20,7 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 # Copy the built application from the previous stage
-COPY --from=build /app/dist/my-angular-app /usr/share/nginx/html
+COPY --from=build /app/dist/iheb-front /usr/share/nginx/html
 
 # Copy NGINX configuration file
 COPY nginx.conf /etc/nginx/nginx.conf
