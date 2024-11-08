@@ -24,6 +24,7 @@ COPY --from=build /app/dist/iheb-front /usr/share/nginx/html
 
 # Copy NGINX configuration file
 COPY nginx.conf /etc/nginx/nginx.conf
+RUN ls -la /etc/nginx/conf.d/
 RUN cat /etc/nginx/nginx.conf
 
 # Expose port 80
