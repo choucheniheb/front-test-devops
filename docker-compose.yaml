@@ -1,4 +1,5 @@
-version: '3'
+version: '3.7'
+
 services:
   angular-app:
     build:
@@ -6,3 +7,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
+    volumes:
+      - ./iheb-front:/usr/share/nginx/html
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
