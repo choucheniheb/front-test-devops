@@ -27,6 +27,7 @@ COPY nginx.conf /etc/nginx/conf.d/nginx.conf
 RUN ls -la /etc/nginx/conf.d/
 RUN cat /etc/nginx/conf.d/nginx.conf
 RUN cat /etc/nginx/nginx.conf
+RUN nginx -t
 
 # Expose port 80
 EXPOSE 80
