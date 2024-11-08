@@ -26,7 +26,7 @@ RUN rm -rf /etc/nginx/conf.d/*
 COPY --from=build /app/dist/iheb-front /usr/share/nginx/html
 
 # Copy NGINX configuration file
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/conf.d/nginx.conf
 
 # Check NGINX configuration for errors
 RUN nginx -t
